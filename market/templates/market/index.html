@@ -1,0 +1,269 @@
+{% extends 'market/base.html' %}
+{% load static %}
+{% block content %}
+<div id="upper-page">
+   <div class="row">
+      <div class="col-2">
+         <h1> Welcome to <br> Lower Kabete Market App!</h1>
+         <p>
+            Success isn't always about greatness. It's about consistency. Consistent<br> hard work gains success. Greatness will come.
+         </p>
+         <a href="{% url 'product-page' %}" class="btn">Explore now &#8594;</a>
+      </div>
+      <br>
+      <div class="col-2">
+         <img src="{% static 'images/shop.jpg' %}">
+      </div>
+   </div>
+</div>
+</div>
+</div>
+<br>
+<!---- Feature categories section ----->
+<div class="categories">
+   <div class="small-containers">
+      <div class="row">
+         <div class="col-3">
+            <img src="{% static 'images/captain.jpg' %}" >
+         </div>
+         <div class="col-3">
+            <img src="{% static 'images/butchery2.jpg' %}" height="300px">
+         </div>
+         <div class="col-3">
+            <img src="{% static 'images/items.jpg' %}">
+         </div>
+      </div>
+   </div>
+</div>
+<!---- Featured products section ----->
+<div class="small-container">
+   <h2 class="title">Shopping Made Easier at the Comfort of your Home!!</h2>
+   <div class="row">
+      <div class="col-4">
+         <img src="{% static 'images/gacio.jpg' %}" height="200px">
+         <h4>Gacio Market</h4>
+         <h6>Shop at Gacio Market</h6>
+         <p> Click on <u class="important">visit!</u> to view registered businesses around Gacio</p>
+         <p>Shop at the comfort of your home!!</p>
+         <a class="btn btn-outline-success" href="{% url 'gacio' %}">Visit</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/kingero.jpg' %}">
+         <h4>Kingero Market</h4>
+         <h6>Shop at Kingero Market</h6>
+         <p> Click on <u class="important">visit</u> to view registered businesses around Kingero</p>
+         <p>Shop at the comfort of your home!!</p>
+
+         <div class="rating">
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star-o"></i>#}
+
+         </div>
+
+         <p><strong> Ksh. 1,200</strong></p>
+
+         {#               <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>#}
+         <strong><a class="btn btn-outline-success" href="{% url 'kingero' %}">Visit</a></strong>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/wangige.jpg' %}">
+         <h4>Wangige Market</h4>
+         <h6>Shop at Wangige Market</h6>
+         <p> Click on <u class="important">visit</u> to view registered businesses around Wangige</p>
+         <p>Why hustle? Shop at the comfort of your home!!</p>
+
+         <div class="rating">
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star"></i>#}
+            {#                  <i class="fa fa-star-o"></i>#}
+
+         </div>
+
+         <p><strong> Ksh. 1,200</strong></p>
+
+         {#               <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>#}
+         <strong><a class="btn btn-outline-success" href="{% url 'wangige' %}">Visit</a></strong>
+      </div>
+
+   </div>
+   <br>
+   {#         Featured Products #}
+   <h2 class="title">Featured Products</h2>
+   <div class="row">
+      <div class="col-4">
+         <img src="{% static 'images/px14.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <span class="fa fa-star checked"></span>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px15.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px16.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px17.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px10.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px12.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px11.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+      <div class="col-4">
+         <img src="{% static 'images/px13.jpg' %}">
+         <h4>White shirt</h4>
+         <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+         </div>
+         <p><strong> Ksh. 1,200</strong></p>
+         <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+         <a class="btn btn-outline-success" href="#">View</a>
+      </div>
+   </div>
+</div>
+<!----- offer ----->
+<div class="offer">
+   <div class="small-container">
+      <div class="row">
+         <div class="col-2">
+            <img src="{% static 'images/px19.jpg' %}" class="offer-img">
+         </div>
+         <div class="col-2">
+            <h1>Stand a Chance to win amazing gift hampers simpy by Shopping With Us!!</h1>
+            <small>
+            Will you be the next Winner!!! Stand a chance of winning gift hampers simply by purchasing goods worth more than Ksh. 500 through our application.
+            </small>
+            <br>
+            <a href="{% url 'product-page' %}" class="btn">Shop &#8594;</a>
+         </div>
+      </div>
+   </div>
+</div>
+<!----- end offer sectjion----->
+<!----- Testimonials Section----->
+<div class="testimonial">
+   <div class="small-container">
+      <div class="row">
+         <div class="col-3">
+            {#                      <i class="fa fa-quote-left"></i>#}
+            {#                      <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>#}
+            {#                      <i class="fa fa-quote-left" aria-hidden="true"></i>#}
+            {#                      <i class="fas fa-quote-left fa-2x"></i>#}
+            <i class="fa fa-quote-left"></i>
+            <p>Amazing application!! I don't have to hustle with going to shop especially when I get and tired from work.
+               Very reliable, I recommend everyone around Lower Kabete to check i out
+            </p>
+            <img src="{% static 'images/allan.jpg' %}">
+            <h3>Allan Koech</h3>
+         </div>
+         <div class="col-3">
+            <i class="fas fa-quote-left fa-pull-left"></i>
+            <p>Amazing application!! I don't have to hustle with going to shop especially when I get and tired from work.
+               Very reliable, I recommend everyone around Lower Kabete to check i out
+            </p>
+            <img src="{% static 'images/jane.jpg' %}">
+            <h3>Dr. Jane Wangu</h3>
+         </div>
+         <div class="col-3">
+            <i class="fas fa-quote-left fa-pull-left"></i>
+            <p>Amazing application!! I don't have to hustle with going to shop especially when I get and tired from work.
+               Very reliable, I recommend everyone around Lower Kabete to check i out
+            </p>
+            <img src="{% static 'images/kakunga.jpg' %}">
+            <h3>Richard Kakunga</h3>
+         </div>
+      </div>
+   </div>
+</div>
+<!----- End Testimonials Section----->
+{% endblock %}

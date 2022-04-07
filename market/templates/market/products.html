@@ -1,0 +1,139 @@
+{% extends 'market/base.html' %}
+{% load static %}
+{% block content %}
+{#----- begining of dropdown----#}
+<div id="upper-container">
+   <h2>Select Shopping Location</h2>
+   <p>Move the mouse over 'Area' button to select your preferred shopping center in Lower Kabete.</p>
+   <div class="dropdown">
+      <button class="dropbtn">Area &#8628;</button>
+      <div class="dropdown-content">
+         <a href="{% url 'gacio' %}">Gacio</a>
+         <a href="{% url 'kingero' %}">Kingero</a>
+         <a href="{% url 'wangige' %}">Wangige</a>
+      </div>
+   </div>
+</div>
+<br>
+<br>
+{#----- end of dropdown -------    #}
+<h2 class="title">All Products</h2>
+<div class="row">
+   <div class="col-4">
+      <img src="{% static 'images/px14.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star" aria-hidden="true"></i>
+         <span class="fa fa-star checked"></span>
+         <i class="fa fa-star checked"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-half-o"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px15.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px16.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px17.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px10.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px12.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px11.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+   <div class="col-4">
+      <img src="{% static 'images/px13.jpg' %}">
+      <h4>White shirt</h4>
+      <div class="rating">
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. 1,200</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'cart' %}">View</a>
+   </div>
+</div>
+</div>
+{#    End of all Products#}
+{% endblock %}

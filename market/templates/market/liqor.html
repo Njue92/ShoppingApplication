@@ -1,0 +1,209 @@
+{% extends 'market/base.html' %}
+{% load static %}
+{% block content %}
+                <a class="btn btn-outline-dark" href="{% url 'product-page' %}"> &#x2190; Continue Shopping</a>
+{#<div class="col-2">#}
+{#<table class="styled-table">#}
+{#    <thead>#}
+{#        <tr>#}
+{#            <th>Item</th>#}
+{#            <th>Quantity</th>#}
+{#            <th>Ksh.</th>#}
+{#            <th>Order</th>#}
+{#        </tr>#}
+{#    </thead>#}
+{#    <tbody>#}
+{#        <tr>#}
+{#            <td>Mbuzi</td>#}
+{#            <td>1/3</td>#}
+{#            <td>150</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#              <tr>#}
+{#            <td>Mbuzi</td>#}
+{#            <td>1/2</td>#}
+{#            <td>300</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#             <tr>#}
+{#            <td>Mbuzi</td>#}
+{#            <td>1 Kg.</td>#}
+{#            <td>600</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#             <tr>#}
+{#            <td>Ngo'mbe</td>#}
+{#            <td>1/3</td>#}
+{#            <td>160</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#             <tr>#}
+{#            <td>Ngo'mbe</td>#}
+{#            <td>1/2</td>#}
+{#            <td>320</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#             <tr>#}
+{#            <td>Ngo'mbe</td>#}
+{#            <td>1 Kg</td>#}
+{#            <td>560</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#             <tr>#}
+{#            <td>Chicken</td>#}
+{#            <td>1/3</td>#}
+{#            <td>250</td>#}
+{#            <td class="btn">Order</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{#        <!-- and so on... -->#}
+{#    </tbody>#}
+{#</table>#}
+{#</div>#}
+{#    <div class="col-2">#}
+{#<table class="styled-table">#}
+{#    <thead>#}
+{#        <tr>#}
+{#            <th>Item</th>#}
+{#            <th>Quantity</th>#}
+{#            <th>Ksh.</th>#}
+{#        </tr>#}
+{#    </thead>#}
+{#    <tbody>#}
+{#        <tr>#}
+{#            <td>Mbuzi</td>#}
+{#            <td>1/3</td>#}
+{#            <td>150</td>#}
+{#        </tr>#}
+{#        <tr class="active-row">#}
+{##}
+{#        <!-- and so on... -->#}
+{#    </tbody>#}
+{#</table>#}
+{#</div>#}
+{##}
+{##}
+{#end of grid#}
+<div id="mjanja">
+<div class="small-containers">
+<h2>Welcome to Lux & Vine Store</h2>
+<p>Contact: 0714227569</p>
+<p>Till No: 9257171</p>
+</div>
+</div>
+<div class="small-container">
+{#<div id="row row-2" >#}
+{##}
+{#<h2>Products</h2>#}
+{#<select>#}
+{#        <option>Nyama ya Mbuzi</option>#}
+{#        <option>Nyama ya Ng'ombe</option>#}
+{#        <option>Chicken</option>#}
+{#        <option>Matumbo</option>#}
+{#        <option>Liver</option>#}
+{##}
+{#</select>#}
+{#</div>#}
+</div>
+
+<div class="row">
+  <div class="column-2">
+    <table>
+      <tr>
+        <th>Sort by
+        <select>
+        <option>Whisky</option>
+        <option>Vodka</option>
+        <option>Ram</option>
+        <option>Beer</option>
+        <option>Cider</option>
+
+</select>
+
+        </th>
+        <th>Quantity
+            <select>
+        <option>250 ml</option>
+        <option>500 ml</option>
+        <option>750 ml</option>
+        <option>1.2 ltr</option>
+        </th>
+          </select>
+          <th>Price</th>
+      </tr>
+
+        <tr>
+            <td>Captain Morgan</td>
+            <td>250ml</td>
+            <td>300</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+              <tr>
+            <td>Captain Morgan</td>
+            <td>500ml</td>
+            <td>460</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+             <tr>
+            <td>Captain Morgan</td>
+            <td>750ml</td>
+            <td>900</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+             <tr>
+            <td>Ngo'mbe</td>
+            <td>1/3</td>
+            <td>160</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+             <tr>
+            <td>Ngo'mbe</td>
+            <td>1/2</td>
+            <td>320</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+             <tr>
+            <td>Ngo'mbe</td>
+            <td>1 Kg</td>
+            <td>560</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+             <tr>
+            <td>Chicken</td>
+            <td>1/3</td>
+            <td>250</td>
+            <td class="btn">Order</td>
+        </tr>
+        <tr class="active-row">
+    </table>
+  </div>
+  <div class="column-2">
+      <h3>Ordered Items</h3>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Ksh.</th>
+      </tr>
+      <tr>
+        <td>Mbuzi</td>
+        <td>1/2</td>
+        <td>250</td>
+      </tr>
+    </table>
+  </div>
+</div>
+{% endblock %}
+

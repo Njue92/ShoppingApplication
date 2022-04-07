@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Lower Kabete Market</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="path/to/fontawesome.min.css">
+      {#      #}
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+      {#      #}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+   </head>
+   <body>
+      <div class="header">
+         <div class="container">
+            <div class="navbar">
+               <div class="logo">
+                  <a href="{% url 'home-page' %}"><img width="125px" src="{% static 'images/logo.jpg' %}"></a>
+               </div>
+               <nav>
+                  <ul id="MenuItems">
+                     <li><a href="{% url 'home-page' %}">Home</a></li>
+                     {#                      --- drop down ----#}
+
+                     <div class="dropdown">
+                        {#    <button class="dropbtn">Shop#}
+                        {#      <i class="fa fa-caret-down"></i>#}
+                        {#    </button>#}
+                        <div class="dropdown-content">
+                           {#      <a href="#">Gacio</a>#}
+                           {#      <a href="#">Kingero</a>#}
+                           {#      <a href="#">Wangige</a>#}
+                           {#
+                        </div>
+
+                     </div>
+                     {#                      ----- end drop down ----#}
+                     <li class="dropdown">
+                        <a href="{% url 'product-page' %}">Shop</a>
+                        <div class="dropdown-content">
+                           <a href="{% url 'gacio' %}">Gacio</a>
+                           <a href="{% url 'kingero' %}">Kingero</a>
+                           <a href="{% url 'wangige' %}">Wangige</a>
+                        </div>
+                     </li>
+                     <li><a href="">About</a> </li>
+                     <li><a href="">Contact</a> </li>
+                     <li><a href="">Account</a> </li>
+                     <li><a href="">Login</a> </li>
+{#                     <li><a href="#"><img src="static/images/cart.png" width="30px" height="30px"></a>0</li>#}
+
+                  </ul>
+               </nav>
+               <a href="#"><img src="{% static 'images/cart.png' %}" width="30px" height="30px">0</a>
+{#               <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle()">#}
+            </div>
+         </div>
+      </div>
+      {% block content %}
+      {% endblock %}
+      <br>
+      {#         <!----- Beginning of  Footer Section----->#}
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="footer-col-1">
+                  <h3>Download Our App</h3>
+                  <p>Download App for Android and ios mobile phone</p>
+                  <div class="app-logo">
+                     <img src="{% static 'images/playstore.jpg' %}">
+                     <img src="{% static 'images/appstore.jpg' %}">
+                  </div>
+               </div>
+               <div class="footer-col-2">
+                  <img src="{% static 'images/logo.jpg' %}">
+                  <p>Our Purpose Is To Sustainably Make The Pleasure And Benefits Of Shopping Online In Lower Kabete Accessible To The Many.</p>
+               </div>
+               <div class="footer-col-3">
+                  <h3>Useful Links</h3>
+                  <ul>
+                     <li>Coupons</li>
+                     <li>Blog posts</li>
+                     <li>Return Policy</li>
+                     <li>Join Affiliate</li>
+                  </ul>
+               </div>
+               <div class="footer-col-4">
+                  <h3>Follow us</h3>
+                  <ul>
+                     <li>Facebook</li>
+                     <li>Twitter</li>
+                     <li>Instagram</li>
+                     <li>Youtube</li>
+                  </ul>
+               </div>
+               <hr>
+               <p class="copyright">Copyright 2022- Dennis Njue</p>
+            </div>
+         </div>
+      </div>
+      <!----- js for toggle menu----->
+      <script>
+         var MenuItems = document.getElementById("MenuItems")
+
+         MenuItems.style.maxHeight= "0px";
+         function menutoggle(){
+             if(MenuItems.style.maxHeight=="0px")
+             {
+              MenuItems.style.maxHeight= "200px"
+             }
+             else
+             {
+                 MenuItems.style.maxHeight= "0px"
+             }
+         }
+      </script>
+      <!----- End of js for toggle menu----->
+   </body>
+</html>
