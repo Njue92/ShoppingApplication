@@ -1,0 +1,77 @@
+{% extends 'market/base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<br>
+<br>
+<form method="post" action="." style="max-width:500px;margin:auto">
+    {% csrf_token %}
+  <h2> Login</h2>
+{{ form.as_p }}
+<!--  <div class="input-container">-->
+<!--    <i class="fa fa-user icon"></i>-->
+<!--    {{form.username}}-->
+<!--  </div>-->
+
+
+<!--  <div class="input-container">-->
+<!--    <i class="fa fa-key icon"></i>-->
+<!--    {{form.password1}}-->
+<!--  </div>-->
+
+
+  <button type="submit" class="btn">Login</button>
+</form>
+<br>
+<h2 class="subtitle">Don't have an account?</h2>
+
+<a href="{% url 'become_vendor' %}">Register</a>
+
+{% endblock %}

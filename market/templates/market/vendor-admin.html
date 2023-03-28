@@ -1,0 +1,63 @@
+{% extends 'market/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="box">
+<h1>Vendor Admin - {{ vendor.name}}</h1>
+
+    <a href="{% url 'logout' %}" class="btn btn-warning">Log out</a>
+</div>
+<div class="box-primary">
+    <h2 class="is-size-3 mb-4">My Products</h2>
+    <br>
+    <a href="{% url 'add_product' %}" class="button is-dark is-uppercase mb-6"><strong>Add Product</strong> </a>
+    <br>
+    <br>
+    {% if products %}
+    <table class="table is-fullwidth">
+        <thead>
+            <th> </th>
+            <th>Product</th>
+            <th>Price</th>
+            <th> Status</th>
+        </thead>
+
+            <tbody>
+                {% for item in products %}
+                <tr>
+                    <td>
+                        <figure class="image is-1by1 mb-10">
+                            <img src="{{ item.get_thumbnail }}">
+                    </figure>
+                    </td>
+                    <td>{{ item.title }}</td>
+                    <td>Ksh. {{ item.price }}</td>
+                    <td> In store</td>
+
+                    <td>
+                        <button class="btn btn-delete">
+                          <span class="mdi mdi-delete mdi-24px"></span>
+                          <span class="mdi mdi-delete-empty mdi-24px"></span>
+                          <span>Delete</span>
+                        </button>
+                    </td>
+                       <td>
+                        <button class="btn btn-edit">
+                          <span class="mdi mdi-delete mdi-24px"></span>
+                          <span class="mdi mdi-delete-empty mdi-24px"></span>
+                          <span>Edit</span>
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+    </table>
+    {% else %}
+    <p>You don't have any products</p>
+    {% endif %}
+</div>
+
+{% endblock %}

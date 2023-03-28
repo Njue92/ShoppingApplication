@@ -4,6 +4,10 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
       <title>Lower Kabete Market</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,21 +46,31 @@
                      {#                      ----- end drop down ----#}
                      <li class="dropdown">
                         <a href="{% url 'product-page' %}">Shop</a>
-                        <div class="dropdown-content">
-                           <a href="{% url 'gacio' %}">Gacio</a>
-                           <a href="{% url 'kingero' %}">Kingero</a>
-                           <a href="{% url 'wangige' %}">Wangige</a>
-                        </div>
+<!--                        <div class="dropdown-content">-->
+<!--                           <a href="{% url 'gacio' %}">Gacio</a>-->
+<!--                           <a href="{% url 'kingero' %}">Kingero</a>-->
+<!--                           <a href="{% url 'wangige' %}">Wangige</a>-->
+<!--                        </div>-->
                      </li>
                      <li><a href="">About</a> </li>
                      <li><a href="">Contact</a> </li>
-                     <li><a href="">Account</a> </li>
-                     <li><a href="">Login</a> </li>
+                     <li><a href="{% url 'cart-page' %}">Account</a> </li>
+                     {% if request.user.is_authenticated %}
+                     <li><a href="{% url 'vendor-admin' %}">Vendor Admin</a> </li>
+                     {% else %}
+                      <li><a href="{% url 'become_vendor' %}">Become a Vendor</a> </li>
+                     {% endif %}
+                     {% if request.user.is_authenticated %}
+                     <li><a href="{% url 'logout' %}">Logout</a> </li>
+                     {% else %}
+                     <li><a href="{% url 'login' %}">Login</a> </li>
+                     {% endif %}
 {#                     <li><a href="#"><img src="static/images/cart.png" width="30px" height="30px"></a>0</li>#}
+               <a href="{% url 'checkout-page' %}"><img src="{% static 'images/cart.png' %}" width="30px" height="30px">0</a>
 
                   </ul>
                </nav>
-               <a href="#"><img src="{% static 'images/cart.png' %}" width="30px" height="30px">0</a>
+               <a href="#"><img src="#" width="30px" height="30px"></a>
 {#               <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle()">#}
             </div>
          </div>

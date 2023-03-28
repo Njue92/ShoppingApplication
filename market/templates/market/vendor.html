@@ -1,0 +1,19 @@
+{% extends 'market/base.html' %}
+{% load static %}
+{% block content %}
+    <h4>Vendor Admin-  </h4>
+    <form method="post" action=".">
+        {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <div class="field">
+        <div class="control">
+            <button class="button is-dark is-uppercase">Sign Up</button>
+        </div>
+    </div>
+    </form>
+
+{% endblock %}
+
+

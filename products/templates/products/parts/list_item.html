@@ -1,0 +1,23 @@
+{% extends 'market/base.html' %}
+{% load static %}
+{% block content %}
+   <div class="col-4">
+       <figure class="image is-4by3 mb-4">
+      <img src="{{ product.get_thumbnail }}">
+       </figure>
+      <h4>{{ product.title }}</h4>
+      <div class="rating">
+         <i class="fa fa-star" aria-hidden="true"></i>
+         <span class="fa fa-star checked"></span>
+         <i class="fa fa-star checked"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star"></i>
+         <i class="fa fa-star-half-o"></i>
+         <i class="fa fa-star-o"></i>
+      </div>
+      <p><strong> Ksh. {{ product.price }}</strong></p>
+      <button class="btn btn-outline-secondary add-btn"> Add to Cart</button>
+      <a class="btn btn-outline-success" href="{% url 'product' product.category.slug product.slug %}">View</a>
+   </div>
+
+{% endblock %}

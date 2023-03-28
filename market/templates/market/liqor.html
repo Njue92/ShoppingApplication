@@ -1,6 +1,9 @@
 {% extends 'market/base.html' %}
 {% load static %}
 {% block content %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
                 <a class="btn btn-outline-dark" href="{% url 'product-page' %}"> &#x2190; Continue Shopping</a>
 {#<div class="col-2">#}
 {#<table class="styled-table">#}
@@ -116,15 +119,19 @@
   <div class="column-2">
     <table>
       <tr>
-        <th>Sort by
-        <select>
-        <option>Whisky</option>
-        <option>Vodka</option>
-        <option>Ram</option>
-        <option>Beer</option>
-        <option>Cider</option>
-
-</select>
+        <th>
+{#        <select>#}
+{#        <option>Whisky</option>#}
+{#        <option>Vodka</option>#}
+{#        <option>Ram</option>#}
+{#        <option>Beer</option>#}
+{#        <option>Cider</option>#}
+{##}
+{#</select>#}
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search..." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 
         </th>
         <th>Quantity
@@ -189,7 +196,10 @@
         <tr class="active-row">
     </table>
   </div>
+
   <div class="column-2">
+      <img src="{% static 'images/liqor.jpg' %}" width="80%" height="80%">
+      <br>
       <h3>Ordered Items</h3>
     <table>
       <tr>

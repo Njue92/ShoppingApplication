@@ -1,8 +1,18 @@
 {% extends 'market/base.html' %}
 {% load static %}
 {% block content %}
+    <!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- The form -->
+
+
 <div class="small-container">
-         <h2 class="title">Welcome to Gacio Market!!</h2>
+         <h2 class="title">Welcome to Wangige Market!!</h2>
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search for a business..." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
          <div class="row">
             <div class="col-4">
                <img src="{% static 'images/butchery2.jpg' %}" height="200px">
@@ -71,5 +81,14 @@
 
          </div>
 </div>
+    <div class="page-btn">
+    <span>1</span>
+     <span>2</span>
+     <span>3</span>
+     <span>4</span>
+     <span>5</span>
+     <span>&#8594</span>
+</div>
+
          <br>
 {% endblock %}
